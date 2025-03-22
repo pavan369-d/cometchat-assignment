@@ -134,7 +134,7 @@ const ProtectedRoute = ({ children }) => {
 - Navigation is smooth.
 ---
 
-## Live Link / Repository 🔗
+## Live Link  🔗
 [GitHub Repository](https://mychatapp9.netlify.app/)
 
 ---

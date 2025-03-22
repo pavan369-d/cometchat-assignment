@@ -2,13 +2,13 @@
   
   
   .auth-fields{
-    width: 60%;
+    width: 50%;
     margin:  0 auto;
     display: flex;
     flex-direction: column;
     gap: 30px;
     justify-content: center;
-    align-items: center;
+  
     padding: 20px;
     font-family: Arial, Helvetica, sans-serif;
   }
@@ -44,40 +44,15 @@
     
   .auth-fields{
     width: 100%;
-    margin:  0 auto;
-    display: flex;
-    flex-direction: column;
-    gap: 30px;
-    justify-content: center;
-    align-items: center;
-    padding: 20px;
-    font-family: Arial, Helvetica, sans-serif;
+  
   }
   
-  .auth-fields h2{
-    color: white;
-    font-family:'Courier New', Courier, monospace;
-  }
+ 
 
   .auth-fields input{
     width: 100%;
-    padding: 10px 15px;
-    font-size: 16px;
-    outline: none;
-    border: 1px solid gray;
-    border-radius: 3px;
+   
   }
   
-  .auth-fields button{
-    background-color: rgb(81, 207, 81);
-    border: none;
-    border-radius: 4px;
-    font-size: 16px;
-    font-weight: 600;
-    color: white;
-    cursor: pointer;
-    width: 100px;
-    padding: 10px;
-    
-  }
+  
   }

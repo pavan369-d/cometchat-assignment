@@ -132,12 +132,7 @@ const ProtectedRoute = ({ children }) => {
 
 ### UI/UX Feedback (Website):
 - Navigation is smooth.
----
 
-## Live Link  🔗
-[GitHub Repository](https://mychatapp9.netlify.app/)
-
----
 
 ## Conclusion 🌟
 Successfully integrated CometChat SDK with user authentication, one-to-one chat, route protection, and backend communication. The integration is complete with API configuration targeting the IN region and responsive UI adjustments.

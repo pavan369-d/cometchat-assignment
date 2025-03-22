@@ -1,19 +1,14 @@
 import { useAuthContext } from "../hooks/useAuthContext";
-import { Navigate } from "react-router-dom";
-
+import {Navigate} from "react-router-dom"
 const ProtectedRoute = ({ children }) => {
-  const { user } = useAuthContext();
+  const { user, loading } = useAuthContext();
 
-  // Optional: Add a `loading` state in context to handle initial load
-  if (user === null) {
-    return <div>Loading...</div>; // Optional loader
+  if (loading) {
+    return <LoaderExampleText />; // Show loader until auth check completes
   }
 
-  if (!user) {
-    return <Navigate to="/login" replace />;
-  }
-
-  return children;
+  return user ? children : <Navigate to="/login" replace />;
 };
 
-export default ProtectedRoute;
+export default ProtectedRoute
+

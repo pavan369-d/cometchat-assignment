@@ -30,11 +30,11 @@ function App() {
        
         <Suspense fallback={<LoaderExampleText/>}>
           <Routes>
+            <Route path="/signup" element={<Signup />} />
+            <Route path="/login" element={<Login />} />
             <Route path="/" element={<ProtectedRoute><Home /></ProtectedRoute>} />
             <Route path="/jobapplies" element={<ProtectedRoute><Jobs /></ProtectedRoute>} />
             <Route path="/addjobs" element={<ProtectedRoute><JobApplyForm /></ProtectedRoute>} />
-            <Route path="/signup" element={<Signup />} />
-            <Route path="/login" element={<Login />} />
             <Route path="*" element={"Not Found"} />
           </Routes>
         </Suspense>

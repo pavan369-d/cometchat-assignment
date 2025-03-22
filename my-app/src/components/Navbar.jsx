@@ -13,6 +13,7 @@ function Navbar(){
         toast.success("Logout Success!");
         setTimeout(function(){
             dispatch({type:"LOGOUT",payload:null})
+            localStorage.removeItem("user");
             navigate("/login")
         })
         

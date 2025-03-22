@@ -100,25 +100,27 @@ const ProtectedRoute = ({ children }) => {
 ```
 
 ---
-
 ## ⚠️ Issues Faced During CometChat Integration
 
 ### 1️⃣ UIKit CSS Variables & Styling Conflicts
-- **Issue:** CometChat UIKit depends on CSS variables defined in their `uikit.css`. 
-- **Problem Faced:** In setups using Vite, Next.js, or TailwindCSS, these variables were either not applied or overridden.
-- **Impact:** Resulted in broken UI styles, incorrect colors, and layout issues.
-- **Solution:** 
-  - Imported UIKit CSS globally:
-    ```javascript
-    import '@cometchat/uikit-react/resources/uikit.css';
-    ```
-  - Scoped styles and adjusted Tailwind `preflight` settings to avoid conflicts.
+- **Issue:** CometChat UIKit depends on CSS variables defined in their `uikit.css`.
+- **Problem Faced:** In setups using **Vite**, **Next.js**, or **TailwindCSS**, these variables were either not applied or overridden.
+- **Impact:** 
+  > Resulted in broken UI styles, incorrect colors, and layout issues.
 
 ---
 
 ### 2️⃣ React Version Compatibility Issues
-- **Issue:** CometChat UIKit v3 had compatibility problems with React 18.
-- **Problem Faced:** Usage of deprecated methods like `ReactDOM.render()` caused errors:
+- **Issue:** CometChat UIKit latest version (**v6.x**) had compatibility problems with **React 19**.
+- **Problem Faced:** The package internally relied on deprecated or removed React APIs like `ReactDOM.render()`, which are no longer supported in React 19.
+- **Example Error:**
+- **Impact:** 
+> The application failed to boot or render CometChat components under React 19.
+
+- **Solution / Workaround:**
+- Downgraded the project to **React 18** for stable integration.
+- Observed that CometChat may require updates to fully support React 19's stricter API requirements.
+- **Recommendation:** Monitor CometChat's release notes and updates for React 19 compatibility fixes.
 
 
 ## Feedback on CometChat Documentation 📄
@@ -133,7 +135,7 @@ const ProtectedRoute = ({ children }) => {
 ---
 
 ## Live Link / Repository 🔗
-[GitHub Repository](https://github.com/pavan369-d/cometchat-assignment.git)
+[GitHub Repository](https://github.com/your-repo-link)
 
 ---
 

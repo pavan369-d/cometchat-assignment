@@ -1,0 +1,149 @@
+.jobs_container {
+  width: 100%;
+  display: flex;
+  gap: 50px;
+  align-items: center;
+  padding: 10px 0;
+}
+
+.jobs_container > div {
+  line-height: 1.6;
+  margin: 20px 0;
+  text-align: left;
+  border-radius: 4px;
+}
+
+.jobs_container button {
+  padding: 0px;
+  font-size: 1.4rem;
+  cursor: pointer;
+}
+
+.jobs_container h3 {
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-weight: 600;
+  color: white;
+  font-size: 24px;
+}
+
+.jobs_container p {
+  font-size: 16px;
+  font-weight: 600;
+  font-family: sans-serif;
+  color: white;
+}
+
+.jobs_container p span,
+.jobs_container h3 span {
+  font-weight: 400;
+  font-family: Arial, Helvetica, sans-serif;
+  margin-left: 10px;
+  font-size: 16px;
+}
+
+.del_btn {
+  padding: 8px 10px;
+  font-family: var(--text-font);
+
+  cursor: pointer;
+  background-color: var(--status-rejected);
+  color: var(--bg-color-light);
+  border: none;
+  border-radius: 4px;
+}
+
+/* job apply form */
+
+#apply_form {
+  margin-top: 80px;
+  width: 100%;
+  padding: 20px;
+  color: white;
+}
+
+#apply_form div {
+  width: 100%;
+  line-height: 1.6;
+  margin-bottom: 20px;
+  text-align: left;
+  /* border: 1px solid red; */
+}
+
+#apply_form input {
+  outline: none;
+  border: none;
+  width: 100%;
+  border-radius: 4px;
+  padding: 10px;
+  font-size: 16px;
+  color: #212121;
+}
+
+#apply_form label {
+  font-family: "Courier New", Courier, monospace;
+}
+
+#apply_form h4 {
+  color: rgb(234, 69, 69);
+  font-weight: 400;
+
+  font-family: "Courier New", Courier, monospace;
+  margin-bottom: 20px;
+}
+
+#apply_form button,
+.jobs_container button {
+  background-color: rgb(81, 207, 81);
+  color: white;
+  border: none;
+  padding: 8px 20px;
+  cursor: pointer;
+  font-size: 1rem;
+  border-radius: 4px;
+  margin-top: 20px;
+}
+
+.jobs_container button {
+  background-color: rgb(234, 69, 69);
+}
+
+.error {
+  border: 1px solid red;
+}
+
+@media (max-width: 680px) {
+  .jobs_container h3 {
+    font-weight: 500;
+    font-size: 1rem;
+  }
+
+  .jobs_container p {
+    font-size: 1rem;
+  }
+
+  .jobs_container p span,
+  .jobs_container h3 span {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 2.2;
+  }
+
+  #apply_form {
+    margin: auto;
+    margin-top: 80px;
+    width: 100%;
+  }
+
+  #apply_form div {
+    line-height: 1.8;
+  }
+
+  #apply_form input {
+    outline: none;
+    border: none;
+    width: 100%;
+    padding: 10px;
+    font-size: 14px;
+    color: white;
+  }
+}

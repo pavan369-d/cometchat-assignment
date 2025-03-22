@@ -51,7 +51,7 @@ function Login(){
    }
 
    if(error){
-    return <div>{error}</div>
+    return <div className="error">{error}</div>
    }
     return (
         <div className="auth-fields">

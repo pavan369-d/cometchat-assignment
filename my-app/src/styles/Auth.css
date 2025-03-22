@@ -40,6 +40,14 @@
     
   }
 
+  .error{
+    text-align: center;
+    margin-top: 50px;
+    color: rgb(234, 69, 69);
+    font-size: 22px;
+    font-family: 'Courier New', Courier, monospace;
+  }
+
   @media (max-width:680px){
     
   .auth-fields{

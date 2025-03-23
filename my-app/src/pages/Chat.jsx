@@ -5,6 +5,8 @@ import '../styles/Chat.css'
 import { useAuthContext } from "../hooks/useAuthContext";
 import { Loader } from "semantic-ui-react";
 import toast from "react-hot-toast";
+import { CometChatUsers } from "@cometchat/chat-uikit-react";
+
 
 function Chat() {
   const [selectedUser, setSelectedUser] = useState(undefined);
@@ -46,24 +48,29 @@ function Chat() {
     fetchUser(user)
 
   }, [user]);
+  function handleOnItemClick(user=CometChat.User){
+    console.log(user, "your custom on item click action");
+    setSelectedUser(user);
+  }
 
   if(loading){
     return <Loader/>
   }
 
   return (
-    <>
-      {selectedUser && (
+    <div className="chat_container">
+     <div className="chat_users"> <CometChatUsers onItemClick={handleOnItemClick}/></div>
+     <div className="chat_message_container">  {selectedUser && (
         <div className="messages-wrapper">
-          <CometChatMessageHeader user={selectedUser}  />
+          <CometChatMessageHeader user={selectedUser}  hideBackButton={true}  />
           <CometChatMessageList user={selectedUser}  />
           <CometChatMessageComposer user={selectedUser}  />
         </div>
       ) }
       {!selectedUser && 
         <div className="empty-conversation">Please set a user or group in App.tsx.</div>
-  }
-    </>
+  }</div>
+    </div>
   );
 };
 

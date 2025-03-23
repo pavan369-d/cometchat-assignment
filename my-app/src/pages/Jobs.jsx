@@ -10,7 +10,7 @@ const Jobs = ()=>{
 
     useEffect(()=>{
         const backendUrl =import.meta.env.VITE_BACKEND_URL;
-        getData(`${backendUrl}api/applies`)
+        getData(`${backendUrl}/api/applies`)
        async function getData(url){
         try{
             const response = await fetch(url,{

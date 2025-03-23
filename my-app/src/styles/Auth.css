@@ -52,14 +52,27 @@
     
   .auth-fields{
     width: 100%;
+    align-items: flex-start;
   
+  }
+
+  .auth-fields h2{
+    
+    font-size: 22px;
   }
   
  
 
   .auth-fields input{
     width: 100%;
+    font-size: 14px;
    
+  }
+
+  .auth-fields button{
+    font-size: 14px;
+    
+    padding: 8px 2px;
   }
   
   

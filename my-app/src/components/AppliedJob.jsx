@@ -15,7 +15,7 @@ const AppliedJob = ({ id, job }) => {
   const handleDelete = useCallback(async () => {
 
     try {
-      const response = await fetch(`${backendUrl}api/applies/${id}`, {
+      const response = await fetch(`${backendUrl}/api/applies/${id}`, {
         method: "DELETE",
         headers: {
          
@@ -48,7 +48,7 @@ const AppliedJob = ({ id, job }) => {
   return (
     <div className="jobs_container">
         
-      <div>
+      <div className="job_content">
         <h3>
           JobTitle:<span>{title}</span>
         </h3>
@@ -65,11 +65,11 @@ const AppliedJob = ({ id, job }) => {
           </a>
         </p>
         <p>
-          Job Status: <span>{status}</span>
+          Job Status: <span >{status}</span>
         </p>
         <p>
           CreatedAt:{" "}
-          <span>
+          <span >
             {formatDistanceToNow(new Date(createdAt), { addSuffix: true })}
           </span>
         </p>

@@ -23,7 +23,7 @@ const JobApplyForm = () => {
     console.log(jobapply);
 
     try {
-      const response = await fetch(`${backendUrl}api/applies`, {
+      const response = await fetch(`${backendUrl}/api/applies`, {
         method: "POST",
         headers: {
           Authorization: `Bearer ${user.token}`,

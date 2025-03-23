@@ -8,12 +8,15 @@
     font-size: 18px;
     align-items: center;
     font-family: 'Courier New', Courier, monospace;
+
+
 }
 
 .navbar a{
     text-decoration: none;
-    
-    margin-right: 20px;
+    font-size: 18px;
+    margin-right: 30px;
+    font-weight: 500;
 }
 
 .navbar span{
@@ -29,7 +32,20 @@
 }
 
 @media (max-width:680px){
-    .navbar{
-        font-size: 14px;
-    }
+
+   
+        
+
+        .navbar a,.navbar span{
+            font-size: 14px;
+            margin: 10px;
+        }
+
+      
+       
+        
+
+    
+
+    
 }

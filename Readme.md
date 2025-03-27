@@ -26,7 +26,7 @@ Integrate CometChat's chat feature into the project and ensure the following fun
 1. **Clone the Repository:**
 ```bash
 git clone <your-repository-link>
-cd cometchat-integration
+cd my-app
 ```
 
 2. **Install Dependencies:**
@@ -81,59 +81,12 @@ const initializer = () => {
 export default initializer;
 ```
 
-### Login with Redirection Delay
-```javascript
-CometChat.login(uid, apiKey).then(user => {
-    localStorage.setItem("user", JSON.stringify(user.getUid()));
-    dispatch({ type: "LOGIN", payload: user.getUid() });
-    toast.success("Login Success");
-    setTimeout(() => navigate("/"), 1500);
-}).catch(handleError);
+
 ```
 
-### Protected Route Example
-```javascript
-const ProtectedRoute = ({ children }) => {
-  const { user } = useAuthContext();
-  return user ? children : <Navigate to="/login" replace />;
-};
 ```
 
 ---
-## ⚠️ Issues Faced During CometChat Integration
-
-### 1️⃣ UIKit CSS Variables & Styling Conflicts
-- **Issue:** CometChat UIKit depends on CSS variables defined in their `uikit.css`.
-- **Problem Faced:** In setups using **Vite**, **Next.js**, or **TailwindCSS**, these variables were either not applied or overridden.
-- **Impact:** 
-  > Resulted in broken UI styles, incorrect colors, and layout issues.
-
----
-
-### 2️⃣ React Version Compatibility Issues
-- **Issue:** CometChat UIKit latest version (**v6.x**) had compatibility problems with **React 19**.
-- **Problem Faced:** The package internally relied on deprecated or removed React APIs like `ReactDOM.render()`, which are no longer supported in React 19.
-- **Example Error:**
-- **Impact:** 
-> The application failed to boot or render CometChat components under React 19.
-
-- **Solution / Workaround:**
-- Downgraded the project to **React 18** for stable integration.
-- Observed that CometChat may require updates to fully support React 19's stricter API requirements.
-- **Recommendation:** Monitor CometChat's release notes and updates for React 19 compatibility fixes.
-
-
-## Feedback on CometChat Documentation 📄
-
-### Pros:
-- The basic documentation is clear for setup.
-- Sample codes are useful for quick testing.
-
-
-### UI/UX Feedback (Website):
-- Navigation is smooth.
-
-
 ## Conclusion 🌟
 Successfully integrated CometChat SDK with user authentication, one-to-one chat, route protection, and backend communication. The integration is complete with API configuration targeting the IN region and responsive UI adjustments.
 

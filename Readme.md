@@ -63,25 +63,6 @@ npm run dev
 
 ---
 
-## Core Code Snippets
-
-### CometChat Initialization
-```javascript
-import { CometChat } from '@cometchat/chat-sdk-javascript';
-
-const appID = import.meta.env.VITE_APP_ID;
-const region = import.meta.env.VITE_REGION;
-const apiKey = import.meta.env.VITE_API_KEY;
-
-const initializer = () => {
-    CometChat.init(appID, { region }).then(() => {
-        console.log('CometChat Initialized');
-    }).catch(console.error);
-}
-export default initializer;
-```
-
-
 ```
 
 ```

@@ -25,7 +25,7 @@ Integrate CometChat's chat feature into the project and ensure the following fun
 
 1. **Clone the Repository:**
 ```bash
-git clone <your-repository-link>
+git clone [<your-repository-link>](https://github.com/pavan369-d/cometchat-assignment
 cd my-app
 ```
 
